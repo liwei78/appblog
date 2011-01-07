@@ -1,0 +1,31 @@
+common: &common
+  keywords: "iphone,ipad,game"
+  description: "iphone and ipad games site"
+  author: "Rique Li, hi@liwei.me"
+  site_title: "My App Blog"
+  admin_key: iamhere
+  admin_account: liwei
+  admin_password: liwei
+  default_icon_path: /images/sample_icon.png
+  categories: ["Lifestyle", "Movie", "Book", "Other"]
+  each_show: 6
+  mail:
+    address: smtp.163.com
+    port: 25
+    domain: 163.com
+    authentication: :login
+    user_name: fexi2006@163.com
+    password: liwei1978
+    sender: myappblog.com
+    title: From MyAppBlog
+
+development:
+  <<: *common
+  test_emails:
+    ["liwei@lol.org.cn", "liwei@17jiayuan.com", "liwei@echangchun.net"]
+
+test:
+  <<: *common  
+
+production:
+  <<: *common

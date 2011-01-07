@@ -1,0 +1,34 @@
+%h2 Welcome
+%p#page-intro
+  What would you like to do?
+%ul.shortcut-buttons-set
+  %li
+    = link_to raw("<span>#{image_tag("/images/admin/icons/paper_content_pencil_48.png")}<br>Add email</span>"), new_admin_email_path, :class => "shortcut-button"
+.clear
+.content-box
+  .content-box-header
+    %h3 Send Email
+    %ul.content-box-tabs
+      %li
+        = link_to "Send", "#", :class => "default-tab"
+    .clear
+  .content-box-content
+    .tab-content.default-tab
+      - unless flash[:error].nil?
+        .notification.error.png_bg
+          = link_to image_tag("/images/admin/icons/cross_grey_small.png"), "#", :class => "close"
+          %div
+            = flash[:error]
+      - form_for(:email, :url => post_mail_admin_emails_path) do
+        %p
+          %label Email Address
+          = text_field_tag :address, "hi@liwei.me", :class => "text-input medium-input"
+        %p
+          %label Option
+          = check_box_tag :include_all, 'true', false
+          Include all subscribe emails ?
+        %p
+          %label App Description
+          = text_area_tag :content, "it's a test.", :class => "text-input textarea large-input", :style => "height: 100px;"
+        %p
+          = submit_tag("Send", :class => "button")

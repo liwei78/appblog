@@ -1,0 +1,14 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  title: App title 1
+  desc: MyText
+  app_type: iphone
+  icon_url: youtube.com/logo.jpg
+  youtube_url: baidu.com/1.v
+
+two:
+  title: App title 2
+  desc: MyText
+  app_type: ipad
+  icon_url: tudou.com/logo.jpg
