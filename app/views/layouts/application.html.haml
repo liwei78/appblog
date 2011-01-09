@@ -12,51 +12,24 @@
     = yield :header
   %body
     .header
-      .logo
-        = image_tag("logo.jpg")
-      %ul.nav
-        %li= link_to raw("<span> </span>"), apps_path, :class => "iphone #{@on_iphone}"
-        %li= link_to raw("<span> </span>"), ipad_apps_path, :class => "ipad #{@on_ipad}"
-    .main
-      .main-header
-      .main-boddy
-        = yield
-        #more-apps-div
-      .main-footer
-        - if ["index", "ipad"].include?(action_name) and App.count > 6
-          .more-app-btn
-            = link_to nbsp, more_apps_path(:app_type => @app_type, :offset => SITE_SETTINGS["each_show"]), :remote => true, :method => :post, :id => "more_app_btn"
-      .icons-div
-        .icons
-          = image_tag("icon_youtube.png")
-          = image_tag("icon_vimeo.png")
-          = link_to(image_tag("icon_facebook.png"), "http://www.facebook.com/share.php?u=#{request.url}", :target => "_blank")
-          = link_to(image_tag("icon_twitter.png"), "http://twitter.com/home?status=#{request.url}", :target => "_blank")
-          = image_tag("icon_feeds.png")
-        .line
-      .subscribe-div
-        .subscribe-form
-          .text
-            Subscribe to our newsletter and get exclusive deals you wont find anywhere else straight to your inbox!
-          - form_tag subscribe_apps_path, :remote => true do
-            .input
-              =text_field_tag :subscribe_mail, "enter your email address", :id => "email_input", :class => "input-field", :onblur=>"addText(this);", :onfocus=>"clearText(this);"
-              =image_submit_tag("subscribe_btn.png", :class => "submit-btn")
-          .notice.error.hide#subscribe_error
-            please enter a valid email address
-          .notice.success.hide#subscribe_success
-            thanks, your address has been added
-
-    .footer
-      .copyright
-        Copyright &copy; 2011 www.MyBananaApp.com All rights reserved.
-    :javascript
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-20608560-1']);
-      _gaq.push(['_trackPageview']);
-
-      (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
+      .nav
+        .logo
+          = image_tag("logo.png")
+        .text
+          .appblog
+            = image_tag("myappblog.png")
+          %span.tabs_left
+            = image_tag("tabs_left.png")
+          .tabs 
+            %ul
+              %li= link_to raw("<span>首页</span>"), "#"
+              %li= link_to raw("<span>最火APP排行</span>"), "#"
+              %li= link_to raw("<span>降价</span>"), "#"
+              %li= link_to raw("<span>分享</span>"), "#"
+              %li= link_to raw("<span>博客</span>"), "#"
+              %li= link_to raw("<span>关于我们</span>"), "#"
+              %li.no-split= link_to raw("<span>邮件订阅</span>"), "#"
+              .clearfix
+          %span.tabs_right
+            = image_tag("tabs_right.png")
+      .sub_nav.clearfix

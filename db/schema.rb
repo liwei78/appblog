@@ -30,7 +30,6 @@ ActiveRecord::Schema.define(:version => 20110104093702) do
 
   create_table "emails", :force => true do |t|
     t.string   "address"
-    t.datetime "last_send"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
