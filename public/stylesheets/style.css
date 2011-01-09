@@ -13,7 +13,7 @@
   color: red; }
 
 body {
-  color: #dddddd;
+  color: #333333;
   padding: 0;
   margin: 0; }
 
@@ -21,31 +21,17 @@ body, p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif; }
 
 body {
-  background-color: #f6e9da; }
+  background-color: #f6e9da;
+  font-size: 14px; }
 
 a {
   text-decoration: none;
-  color: #dddddd; }
+  color: white; }
 
 img {
   border: 0; }
 
-h1, h2, h3 {
-  color: #ff0084; }
-  h1 a, h2 a, h3 a {
-    color: #ff0084 !important;
-    text-decoration: underline; }
-
 /*common style*/
-.fs-10 {
-  font-size: 10px; }
-
-.fs-12 {
-  font-size: 12px; }
-
-.fs-14 {
-  font-size: 14px; }
-
 .right {
   float: right; }
 
@@ -85,7 +71,7 @@ h1, h2, h3 {
       height: 149px;
       float: left; }
     .header .nav .text {
-      width: 734px;
+      width: 710px;
       height: 149px;
       float: left;
       margin-left: 4px;
@@ -103,14 +89,14 @@ h1, h2, h3 {
         width: 75px;
         height: 38px;
         position: absolute;
-        right: 0;
+        right: 40px;
         bottom: 0; }
       .header .nav .text .tabs {
         position: absolute;
         background: url(/images/tabs_bg.png) repeat-x bottom;
         bottom: 0px;
         left: 25px;
-        width: 634px; }
+        width: 620px; }
         .header .nav .text .tabs ul {
           padding: 0;
           margin: 0; }
@@ -126,22 +112,73 @@ h1, h2, h3 {
               line-height: 33px;
               color: #efefef;
               padding-left: 10px;
-              display: block;
-              z-index: 0; }
+              display: block; }
               .header .nav .text .tabs ul li a span {
                 display: block;
                 padding-right: 10px;
-                padding-top: 2px;
-                z-index: 10; }
+                padding-top: 2px; }
             .header .nav .text .tabs ul li a:hover {
               color: #8d450a;
               background: url(/images/tab_link_hover_bg_left.png) no-repeat left top; }
               .header .nav .text .tabs ul li a:hover span {
                 background: url(/images/tab_link_hover_bg.png) no-repeat right top; }
+            .header .nav .text .tabs ul li a.on {
+              position: relative;
+              bottom: 0;
+              z-index: 99;
+              color: #8d450a;
+              margin-right: 10px; }
+              .header .nav .text .tabs ul li a.on span.outer {
+                position: relative;
+                bottom: 0;
+                height: 34px;
+                background: url(/images/tab_link_on_bg_left.png) no-repeat left top;
+                padding-left: 20px;
+                padding-right: 0;
+                padding-top: 0;
+                z-index: 99; }
+              .header .nav .text .tabs ul li a.on span.inner {
+                position: relative;
+                bottom: 0;
+                height: 34px;
+                background: url(/images/tab_link_on_bg.png) no-repeat right top;
+                padding-left: 0;
+                padding-right: 20px;
+                padding-top: 0;
+                z-index: 99; }
+            .header .nav .text .tabs ul li a.on:hover {
+              background: none; }
           .header .nav .text .tabs ul li.no-split {
             background: none;
             margin-right: 0;
             padding-right: 0; }
   .header .sub_nav {
     height: 32px;
-    background: url(/images/subnav_bg.png) repeat-x; }
+    background: url(/images/subnav_bg.png) repeat-x;
+    position: relative;
+    z-index: 0; }
+    .header .sub_nav .nav_box {
+      width: 938px;
+      margin: 0 auto; }
+    .header .sub_nav span.split {
+      width: 2px;
+      height: 28px;
+      background: url(/images/subnav_split.png) no-repeat center center; }
+    .header .sub_nav a {
+      font-size: 12px;
+      color: #8d450a;
+      padding-left: 8px;
+      line-height: 17px;
+      height: 17px; }
+      .header .sub_nav a span {
+        padding-right: 8px; }
+    .header .sub_nav a:hover {
+      color: #efefef;
+      background: url(/images/subnav_link_bg_hover.png) no-repeat left top; }
+      .header .sub_nav a:hover span {
+        background: url(/images/subnav_link_bg_hover.png) no-repeat right top; }
+    .header .sub_nav .sub_nav_div {
+      height: 28px;
+      line-height: 28px; }
+    .header .sub_nav .share {
+      margin-left: 424px; }
