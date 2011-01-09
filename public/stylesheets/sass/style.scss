@@ -202,3 +202,34 @@ img {border: 0;}
     }
   }
 }
+
+.main {
+  background: url(/images/main_bg.png) repeat-x top;
+  min-height: 900px;
+}
+.footer {
+  height: 156px;
+  background: url(/images/footer_bg.png) repeat-x top;
+}
+.layout {
+  width: 928px;
+  margin: 0 auto;
+  padding-top: 4px;
+  .content {
+    width: 652px;
+    float: left;
+  }
+  .sider {
+    width: 272px;
+    float: right;
+  }
+}
+
+.app_item {
+  border: 2px solid #e4d3be;
+  border-radius: 4px;
+  -moz-border-radius: 6px;
+  margin-bottom: 2px;
+  background-color: #ffffff;
+  min-height: 200px;
+}

@@ -1,8 +1,7 @@
-Moreappweb::Application.routes.draw do
+Myappblog::Application.routes.draw do
   resources :apps do
     collection do
-      get 'ipad'
-      post 'more', 'subscribe'
+      get 'hot', 'discount', 'share', 'about', 'subscribe'
     end
   end
   

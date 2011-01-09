@@ -22,19 +22,27 @@
             = image_tag("tabs_left.png")
           .tabs 
             %ul
-              %li= link_to raw("<span>首页</span>"), "#"
-              %li= link_to raw("<span>最火APP排行</span>"), "#"
-              %li.no-split= link_to raw("<span>降价</span>"), "#"
-              %li.no-split= link_to raw("<span class='outer'><span class='inner'>分享</span></span>"), "#", :class => "on"
-              %li= link_to raw("<span>博客</span>"), "#"
-              %li= link_to raw("<span>关于我们</span>"), "#"
-              %li.no-split= link_to raw("<span>邮件订阅</span>"), "#"
+              %li= link_to raw("<span>#{t :nav_home}</span>"), "#"
+              %li= link_to raw("<span>#{t :nav_hot}</span>"), "#"
+              %li.no-split= link_to raw("<span>#{t :nav_discount}</span>"), "#"
+              %li.no-split= link_to raw("<span class='outer'><span class='inner'>#{t :nav_share}</span></span>"), "#", :class => "on"
+              %li= link_to raw("<span>#{t :nav_blog}</span>"), "#"
+              %li= link_to raw("<span>#{t :nav_about}</span>"), "#"
+              %li.no-split= link_to raw("<span>#{t :nav_subscribe}</span>"), "#"
               .clearfix
           %span.tabs_right
             = image_tag("tabs_right.png")
       .sub_nav.clearfix
         .nav_box
           .sub_nav_div.share
-            %span= link_to raw("<span>作品分享</span>"), "#"
+            %span= link_to raw("<span>#{t :subn_share}</span>"), "#"
             %span.split &nbsp;
-            %span= link_to raw("<span>上传作品</span>"), "#"
+            %span= link_to raw("<span>#{t :subn_upload}</span>"), "#"
+    .main
+      .layout
+        .content
+          = yield
+        .sider
+          = render :partial => "layouts/sider"
+        .clearfix
+    .footer
