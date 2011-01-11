@@ -7,8 +7,9 @@ common: &common
   admin_account: liwei
   admin_password: liwei
   default_icon_path: /images/sample_icon.png
-  categories: ["Lifestyle", "Movie", "Book", "Other"]
-  each_show: 6
+  app_type:   [[0, "iphone"], [1, "piad"], [2, "iphone and ipad"]]
+  categories: [[0, "Game"], [1, "Social"], [2, "Movie"], [3, "Other"]]
+
   mail:
     address: smtp.163.com
     port: 25

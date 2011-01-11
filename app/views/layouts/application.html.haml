@@ -22,10 +22,10 @@
             = image_tag("tabs_left.png")
           .tabs 
             %ul
-              %li= link_to raw("<span>#{t :nav_home}</span>"), "#"
+              %li.no-split= link_to raw("<span class='outer'><span class='inner'>#{t :nav_home}</span></span>"), "#", :class => "on"
               %li= link_to raw("<span>#{t :nav_hot}</span>"), "#"
-              %li.no-split= link_to raw("<span>#{t :nav_discount}</span>"), "#"
-              %li.no-split= link_to raw("<span class='outer'><span class='inner'>#{t :nav_share}</span></span>"), "#", :class => "on"
+              %li= link_to raw("<span>#{t :nav_discount}</span>"), "#"
+              %li= link_to raw("<span>#{t :nav_share}</span>"), "#"
               %li= link_to raw("<span>#{t :nav_blog}</span>"), "#"
               %li= link_to raw("<span>#{t :nav_about}</span>"), "#"
               %li.no-split= link_to raw("<span>#{t :nav_subscribe}</span>"), "#"
@@ -34,7 +34,7 @@
             = image_tag("tabs_right.png")
       .sub_nav.clearfix
         .nav_box
-          .sub_nav_div.share
+          .sub_nav_div.share.hide
             %span= link_to raw("<span>#{t :subn_share}</span>"), "#"
             %span.split &nbsp;
             %span= link_to raw("<span>#{t :subn_upload}</span>"), "#"

@@ -15,11 +15,14 @@ ActiveRecord::Schema.define(:version => 20110104093702) do
   create_table "apps", :force => true do |t|
     t.string   "title"
     t.text     "desc"
-    t.string   "app_type"
-    t.string   "category"
-    t.string   "itunes_url"
-    t.string   "youtube_url"
-    t.integer  "position",          :default => 0
+    t.integer  "app_type"
+    t.integer  "category"
+    t.integer  "star"
+    t.string   "author"
+    t.datetime "publish_date"
+    t.decimal  "price",             :precision => 8, :scale => 2, :default => 0.0
+    t.string   "download_url"
+    t.integer  "position",                                        :default => 0
     t.string   "icon_file_name"
     t.string   "icon_content_type"
     t.integer  "icon_file_size"

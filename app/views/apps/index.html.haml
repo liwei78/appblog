@@ -1,3 +1,22 @@
-- 3.times do
+- for app in @apps
   .app_item
-    heh
+    .item_sider
+      .icon
+        = image_tag(app.icon.url)
+      .download_btn
+        = link_to(image_tag("download_btn.png"), app.download_url, :target => "_blank")
+      .info{:class => "app_type_#{app.app_type}"}
+        %p
+          %span
+            价格：
+          免费
+        %p
+          %span
+            大小：
+          180M
+
+    .item_content
+      .title
+      .info
+      .desc
+    .clearfix

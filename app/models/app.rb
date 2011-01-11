@@ -6,7 +6,7 @@ class App < ActiveRecord::Base
     :presence => true
   
   has_attached_file :icon,
-    :styles => { :original => "82x82" },
+    :styles => { :original => "125x125" },
     :url => "/:class/:attachment/:id/:style_:basename.:extension",
     :path => ":rails_root/public/:class/:attachment/:id/:style_:basename.:extension",
     :default_url => "/images/sample_icon.png"

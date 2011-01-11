@@ -1,7 +1,7 @@
 class AppsController < ApplicationController
   
   def index
-    @apps = App.find(:all)
+    @apps = App.find(:all, :limit => 3, :order => "position desc, id desc")
     respond_to do |format|
       format.html
     end

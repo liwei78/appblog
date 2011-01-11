@@ -4,4 +4,4 @@
 require File.expand_path('../config/application', __FILE__)
 require 'rake'
 
-Moreappweb::Application.load_tasks
+Myappblog::Application.load_tasks
