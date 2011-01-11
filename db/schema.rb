@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(:version => 20110104093702) do
     t.string   "author"
     t.datetime "publish_date"
     t.decimal  "price",             :precision => 8, :scale => 2, :default => 0.0
+    t.string   "size"
     t.string   "download_url"
     t.integer  "position",                                        :default => 0
     t.string   "icon_file_name"

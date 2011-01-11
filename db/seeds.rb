@@ -10,7 +10,7 @@ if true or Rails.env == "development"
   i = 0
   20.times do
     App.create(
-      :title    => "(#{i.to_s})" + "CRAZYFIST",
+      :title    => "CRAZYFIST",
       :desc     => "    Crazy Fist是一位国内独立开发者首次开发作品，对于第一款游戏来说
       采用3D游戏还是很大胆的，而且画面美工水平不低，游戏玩法也不俗。
       要控制跑酷狂人不断的突破障碍物，如果遇到高墙游戏则要用拳头砸破，
@@ -21,7 +21,8 @@ if true or Rails.env == "development"
       :download_url => "http://www.apple.com",
       :star => 7,
       :author => "liwei",  
-      :publish_date => Time.now
+      :publish_date => Time.now,
+      :size => "120M"
     )
     i += 1
   end

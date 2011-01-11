@@ -26,7 +26,7 @@ body {
 
 a {
   text-decoration: none;
-  color: white; }
+  color: #333333; }
 
 img {
   border: 0; }
@@ -77,25 +77,26 @@ img {
       margin-left: 4px;
       position: relative; }
       .header .nav .text .appblog {
-        margin-top: 54px;
+        margin-top: 34px;
         margin-left: 16px; }
       .header .nav .text span.tabs_left {
-        width: 25px;
+        width: 15px;
         height: 33px;
         position: absolute;
         left: 0;
-        bottom: 0; }
+        bottom: 0;
+        background: url(/images/tabs_left.png) no-repeat top left; }
       .header .nav .text span.tabs_right {
         width: 75px;
         height: 38px;
         position: absolute;
-        right: 40px;
+        right: 20px;
         bottom: 0; }
       .header .nav .text .tabs {
         position: absolute;
         background: url(/images/tabs_bg.png) repeat-x bottom;
         bottom: 0px;
-        left: 25px;
+        left: 15px;
         width: 620px; }
         .header .nav .text .tabs ul {
           padding: 0;
@@ -209,22 +210,70 @@ img {
   margin-bottom: 2px;
   padding: 14px;
   background-color: #ffffff;
-  min-height: 200px; }
+  min-height: 200px;
+  position: relative; }
+  .app_item .free {
+    position: absolute;
+    width: 58px;
+    height: 580px;
+    top: 0;
+    right: 0;
+    background: url(/images/free.png) no-repeat right top; }
   .app_item .item_sider {
     width: 129px;
     float: left; }
     .app_item .item_sider .download_btn {
       margin-top: 8px; }
     .app_item .item_sider .info {
-      margin-top: 8px; }
+      margin-top: 8px;
+      height: 36px; }
       .app_item .item_sider .info p {
         padding: 0;
         margin: 0;
         font-size: 12px;
-        color: #767676; }
+        color: #333333; }
         .app_item .item_sider .info p span {
-          width: 36px;
-          overflow: hidden; }
+          overflow: hidden;
+          text-align: right; }
+    .app_item .item_sider .app_type_0 {
+      background: url(/images/icon_iphone.png) no-repeat right top; }
+    .app_item .item_sider .app_type_1 {
+      background: url(/images/icon_ipad.png) no-repeat right top; }
+    .app_item .item_sider .app_type_2 {
+      background: url(/images/icon_iphone_ipad.png) no-repeat right top; }
   .app_item .item_content {
     width: 470px;
     float: right; }
+    .app_item .item_content .title {
+      color: #8b460d;
+      font-size: 20px;
+      font-weight: bold;
+      line-height: 32px;
+      height: 32px;
+      padding: 0 0 0 0;
+      border-bottom: 1px solid #d2d2d2; }
+      .app_item .item_content .title a {
+        color: #8b460d; }
+      .app_item .item_content .title .star_rate {
+        margin-top: 4px;
+        margin-right: 20px; }
+    .app_item .item_content .info {
+      color: #8b460d;
+      font-size: 12px;
+      line-height: 16px;
+      height: 16px; }
+    .app_item .item_content .desc {
+      font-size: 14px;
+      line-height: 26px; }
+
+.sider_box {
+  border: 1px solid #d8d8d8;
+  background-color: #ffffff;
+  padding: 2px;
+  margin-bottom: 6px;
+  height: 101px; }
+  .sider_box img {
+    width: 266px;
+    height: 100px;
+    margin: 0;
+    border: 0; }

@@ -9,6 +9,7 @@ class CreateApps < ActiveRecord::Migration
       t.string   :author
       t.datetime :publish_date
       t.decimal  :price, :precision => 8, :scale =>2, :default=>0.00
+      t.string   :size
       t.string   :download_url
       t.integer  :position, :default => 0
       t.string   :icon_file_name

@@ -1,5 +1,11 @@
+- content_for :header do
+  :javascript
+    $.fn.rating.options.split = 2;
+
 - for app in @apps
   .app_item
+    - if app.is_free?
+      .free &nbsp
     .item_sider
       .icon
         = image_tag(app.icon.url)
@@ -8,15 +14,25 @@
       .info{:class => "app_type_#{app.app_type}"}
         %p
           %span
-            价格：
-          免费
+            = (t :item_price)
+          = app.price == 0.00 ? (t :v_free) : "$#{app.price}"
         %p
           %span
-            大小：
-          180M
+            = (t :item_size)
+          = app.size
 
     .item_content
       .title
+        .star_rate.right
+          - 10.times do |t|
+            = radio_button_tag "str_#{app.id}", "", false, :class=>"star", :disabled=>true
+        = link_to app.title, app
       .info
+        .right.publish_date
+          = app.publish_date.to_date
+        = "#{t :item_author}: #{app.author}"
+        = nbsp(4)
+        = "#{t :item_category}: #{app.category_view}"
       .desc
+        = simple_format(app.desc)
     .clearfix

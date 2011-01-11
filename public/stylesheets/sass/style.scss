@@ -5,7 +5,7 @@
 */
 
 $page_color:      #333333;
-$link_color:      #ffffff;
+$link_color:      #333333;
 $tab_margin:      10px;
 $nav_box_with:    938px;
 $nav_dark_color:  #8d450a;
@@ -70,28 +70,29 @@ img {border: 0;}
       margin-left: 4px;
       position: relative;
       .appblog {
-        margin-top: 54px;
+        margin-top: 34px;
         margin-left: 16px;
       }
       span.tabs_left {
-        width: 25px;
+        width: 15px;
         height: 33px;
         position: absolute;
         left: 0;
         bottom: 0;
+        background: url(/images/tabs_left.png) no-repeat top left;
       }
       span.tabs_right {
         width: 75px;
         height: 38px;
         position: absolute;
-        right: 40px;
+        right: 20px;
         bottom: 0;
       }
       .tabs {
         position: absolute;
         background: url(/images/tabs_bg.png) repeat-x bottom;
         bottom: 0px;
-        left: 25px;
+        left: 15px;
         width: 620px;
         ul {
           padding: 0;
@@ -233,6 +234,15 @@ img {border: 0;}
   padding: 14px;
   background-color: #ffffff;
   min-height: 200px;
+  position: relative;
+  .free {
+    position: absolute;
+    width: 58px;
+    height: 580px;
+    top: 0;
+    right: 0;
+    background: url(/images/free.png) no-repeat right top;
+  }
   .item_sider {
     width: 129px;
     float: left;
@@ -241,23 +251,70 @@ img {border: 0;}
     }
     .info {
       margin-top: 8px;
+      height: 36px;
       p {
         padding: 0;
         margin: 0;
         font-size: 12px;
-        color: #767676;
+        color: #333333;
         span {
-          width: 36px;
           overflow: hidden;
+          text-align: right;
         }
       }
     }
-    。app_type_0 {
-      
+    .app_type_0 {
+      background: url(/images/icon_iphone.png) no-repeat right top;
+    }
+    .app_type_1 {
+      background: url(/images/icon_ipad.png) no-repeat right top;
+    }
+    .app_type_2 {
+      background: url(/images/icon_iphone_ipad.png) no-repeat right top;
     }
   }
   .item_content {
     width: 470px;
     float: right;
+    .title {
+      color: #8b460d;
+      font-size: 20px;
+      font-weight: bold;
+      line-height: 32px;
+      height: 32px;
+      padding: 0 0 0 0;
+      border-bottom: 1px solid #d2d2d2;
+      a {
+        color: #8b460d;
+      }
+      .star_rate {
+        margin-top: 4px;
+        margin-right: 20px;
+      }
+    }
+    .info {
+      color: #8b460d;
+      font-size: 12px;
+      line-height: 16px;
+      height: 16px;
+    }
+    .desc {
+      font-size: 14px;
+      line-height: 26px;
+    }
+  }
+}
+
+.sider_box {
+  border: 1px solid #d8d8d8;
+  background-color: #ffffff;
+  padding: 2px;
+  margin-bottom: 6px;
+  height: 101px;
+  img {
+    width: 266px;
+    height: 100px;
+    margin: 0;
+    border: 0;
   }
 }

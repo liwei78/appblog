@@ -6,8 +6,8 @@
     %meta{'name' => "keywords", :content => "#{SITE_SETTINGS["keywords"]}"}
     %meta{'name' => "description", :content => "#{SITE_SETTINGS["description"]}"}
     %meta{'name' => "author", :content => "#{SITE_SETTINGS["author"]}"}
-    = stylesheet_link_tag "style"
-    = javascript_include_tag "jquery", "rails", "application"
+    = stylesheet_link_tag "style", "jquery.rating"
+    = javascript_include_tag "jquery", "rails", "application", "jquery.rating"
     = csrf_meta_tag
     = yield :header
   %body
@@ -18,8 +18,7 @@
         .text
           .appblog
             = image_tag("myappblog.png")
-          %span.tabs_left
-            = image_tag("tabs_left.png")
+          %span.tabs_left &nbsp;
           .tabs 
             %ul
               %li.no-split= link_to raw("<span class='outer'><span class='inner'>#{t :nav_home}</span></span>"), "#", :class => "on"

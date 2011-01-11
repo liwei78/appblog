@@ -12,8 +12,16 @@ class App < ActiveRecord::Base
     :default_url => "/images/sample_icon.png"
   
   
-  def has_youtube?
-    !self.youtube_url.blank?
+  def is_free?
+    self.price == 0.00
+  end
+  
+  def category_view
+    SITE_SETTINGS["categories"][self.category][1]
+  end
+  
+  def star_rate(r)
+    r == 2
   end
   
 end

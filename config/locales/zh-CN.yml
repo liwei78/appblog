@@ -1,4 +1,5 @@
 zh-CN:
+  # 一级栏目名称
   nav_home: 首页
   nav_hot: 最火APP排行
   nav_discount: 降价
@@ -7,5 +8,15 @@ zh-CN:
   nav_about: 关于我们
   nav_subscribe: 邮件订阅
   
+  # 二级栏目名称
   subn_share: 作品分享
   subn_upload: 上传作品
+  
+  # 应用列表
+  item_price: 价格：
+  item_size: 大小：
+  item_author: 作者
+  item_category: 分类
+  
+  # 页面文字
+  v_free: 免费
